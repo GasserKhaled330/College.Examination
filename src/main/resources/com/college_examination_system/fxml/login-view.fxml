@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="400.0" minWidth="650.0" prefHeight="400.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.college_examination_system.controllers.UserController">
+   <left>
+      <Pane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #1e44e5;">
+         <Label alignment="CENTER" layoutX="30.0" layoutY="82.0" text="College Examination System" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font name="Segoe UI Semibold" size="18.0" />
+            </font>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+         </Label>
+         <Label alignment="CENTER" layoutX="75.0" layoutY="119.0" text="College Exams made easy" textFill="WHITE">
+            <font>
+               <Font name="Segoe UI Semibold" size="12.0" />
+            </font>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+         </Label>
+      </Pane>
+   </left>
+   <right>
+      <Pane prefHeight="400.0" prefWidth="454.0" BorderPane.alignment="CENTER">
+         <TextField fx:id="userNameTxtField" layoutX="31.0" layoutY="112.0" prefHeight="34.0" prefWidth="275.0" promptText="Enter your email address" />
+         <PasswordField fx:id="passwordTxtField" layoutX="31.0" layoutY="173.0" prefHeight="34.0" prefWidth="275.0" promptText="Enter a password" />
+         <Label layoutX="31.0" layoutY="51.0" prefHeight="20.0" prefWidth="118.0" text="Sign in">
+            <font>
+               <Font name="Segoe UI Bold" size="24.0" />
+            </font>
+         </Label>
+         <Button fx:id="submitButton" defaultButton="true" layoutX="169.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#handleSubmitButtonAction" prefHeight="34.0" prefWidth="137.0" stylesheets="@../styling/mainStyle.css" text="Sign in">
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <RadioButton fx:id="AdminRadioBtn" layoutX="31.0" layoutY="241.0" mnemonicParsing="false" text="Admin" />
+         <RadioButton fx:id="StudentRadioBtn" layoutX="133.0" layoutY="241.0" mnemonicParsing="false" text="Student" />
+         <RadioButton fx:id="LecturerRadioBtn" layoutX="232.0" layoutY="241.0" mnemonicParsing="false" text="Lecturer" />
+      </Pane>
+   </right>
+</BorderPane>
